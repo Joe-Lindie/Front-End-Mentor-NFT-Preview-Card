@@ -1,0 +1,163 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Primary Colors */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--Very-dark-blue-main-BG);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+p {
+  color: var(--Soft-blue);
+  font-size: 18px;
+  font-weight: 300;
+}
+/* End of setup */
+
+/* Main CSS */
+
+#container {
+  background-color: var(--Very-dark-blue-card-BG);
+  margin: 3.75rem 1.5rem 3.75rem 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+}
+
+h1 {
+  color: var(--White);
+  font-size: 1.56rem;
+  font-weight: 600;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+#sub-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.4rem;
+}
+
+#sub-time-container,
+#sub-ETH-container {
+  display: flex;
+  align-items: center;
+}
+
+.ETH {
+  color: var(--Cyan);
+  font-weight: 600;
+  padding-left: 0.43rem;
+}
+.days-left {
+  padding-left: 0.43rem;
+}
+
+hr {
+  border-color: var(--Soft-blue);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.avatar {
+  width: 2.18rem;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+.footer-text {
+  padding-left: 1rem;
+}
+
+span {
+  color: var(--White);
+  font-weight: 400;
+}
+
+/*Equilibrium Main Image*/
+
+.image-wrapper {
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+.logo {
+  width: 100%;
+  border-radius: 0.62rem;
+}
+
+.hide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+#overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 0.62rem;
+  background-color: var(--Cyan);
+  opacity: 0;
+}
+
+/*Hover states*/
+
+.hide:hover,
+#overlay:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+span:hover,
+h1:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signature {
+  font-size: 1rem;
+  text-align: center;
+  padding-bottom: 0.25rem;
+}
+
+/*Desktop*/
+
+@media (min-width: 530px) {
+  #container {
+    width: 22rem;
+    height: 37.3rem;
+  }
+}
